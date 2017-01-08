@@ -1,0 +1,10 @@
+<h3><%= count %> последних новостей от Яндекс в категории <%= category %></h3>
+
+<dl>
+	<% news.entries.forEach(function(item) { %>
+		<dt>
+			<a href="<%- item.link %>"><%- item.title %></a>
+		</dt>
+		<p><%- item.contentSnippet %></p>
+	<% }); %>
+</dl>
